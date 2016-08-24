@@ -2,6 +2,8 @@
 layout: default
 ---
 
+![SwiftierSwift](//raw.githubusercontent.com/omaralbeik/SwiftierSwift/master/logo.png)
+
 [SwiftierSwift](//github.com/OmarAlbeik/SwiftierSwift) is a Swift3 library with various extensions done to make iOS application development easier and readable for everyone
 
 Looking for a more standard Jekyll theme? Try out [Shiori](http://github.com/ellekasai/shiori) theme, which has Bootstrap integration.
