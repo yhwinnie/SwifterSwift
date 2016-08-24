@@ -1,10 +1,10 @@
 # Site settings
-title: Solo, a Jekyll Theme
-tag_text: Solo
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
+title: SwiftierSwift | Swift3 Extended Libraries
+tag_text: Swift
+description: page desc goes here
 
 # Build settings
 markdown: kramdown
-exclude: ["README.md"]
+exclude: ["readme.md"]
 sass:
   style: compressed
