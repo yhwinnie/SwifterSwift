@@ -18,8 +18,10 @@
 		return;
 	}
 	window.onload = function() {
-		refresh();
-		setInterval(refresh,1000);
+		if(window.location.hostname == "localhost") {
+			refresh();
+			setInterval(refresh,1000);
+		}
 		return;
 	};
 </script>
