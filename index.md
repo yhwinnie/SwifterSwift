@@ -46,7 +46,7 @@ $ pod install
 
 ### Manually
 
-Add the [extensions](Extensions) folder to your Xcode project to use all extensions, or a specific extension.
+Add the [extensions](//github.com/OmarAlbeik/SwifterSwift/blob/master/Extensions) folder to your Xcode project to use all extensions, or a specific extension.
 
 
 ## Requirements:
