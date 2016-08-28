@@ -6,12 +6,53 @@ layout: default
 
 *A handy collection of native Swift 3 extensions to boost your productivity.*
 
-[SwiftierSwift](//github.com/OmarAlbeik/SwiftierSwift) is a Swift3 library with various extensions done to make iOS application development easier and readable for everyone
+[SwiftierSwift](//github.com/OmarAlbeik/SwiftierSwift) is a Swift3 library with various extensions done to make iOS application development easier and readable for everyone and its a library of over **250** properties and methods, designed to extend Swift's functionality and productivity, staying faithful to the original design guidelines of swift 3.
+
+<style> .container P A IMG { display:inline-block; } </style>
+[![Build Status](//travis-ci.org/omaralbeik/SwifterSwift.svg?branch=master)](//travis-ci.org/omaralbeik/SwifterSwift)
+[![Swift](//img.shields.io/badge/Swift-3.0-orange.svg)](//swift.org)
+[![Platform](//img.shields.io/badge/Platform-iOS-lightgrey.svg)](//github.com/omaralbeik/swifterSwift)
+[![Xcode](//img.shields.io/badge/Xcode-8.0%20beta6-blue.svg)](//developer.apple.com/xcode)
+[![MIT](//img.shields.io/badge/License-MIT-red.svg)](//opensource.org/licenses/MIT)
+[![Join the chat at //gitter.im/swifterswift/Lobby](//badges.gitter.im/swifterswift/Lobby.svg)](//gitter.im/swifterswift/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## How to use?
 
-Copy to the extensions folder of your Xcode project to use all extensions, or a specific extension.
+### CocoaPods
 
+[CocoaPods](//cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate SwifterSwift into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'SwifterSwift' , :git => 'https://github.com/omaralbeik/SwifterSwift.git'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+### Manually
+
+Add the [extensions](Extensions) folder to your Xcode project to use all extensions, or a specific extension.
+
+
+## Requirements:
+
+Xcode 8 beta5 or later with Swift 3.
+This library is made for iOS 8 or later, however most of the extensions should work on watchOS, tvOS, and macOS
 ## Notes on docs:
 
 We also included inline documentation to you to easily look up things in auto completion while typing, making you write code faster.
@@ -32,8 +73,7 @@ We also included inline documentation to you to easily look up things in auto co
 // and many others!
 ```
 
-
-#### Date Extensions (23)
+#### Date Extensions (28)
 ```swift
 // Get and set components from date with ease
 date.hour = 14
@@ -44,8 +84,11 @@ Date().isInToday -> true
 // Add 1 month to current date
 Date().add(component: .month, value: 1)
 
-// Return beginning of current day
+// Return date at the beginning of current day
 Date().beginning(of component: .day)
+
+// Return date at the end of current month
+Date().end(of component: .month)
 
 // Check if date is in current calendar unit
 Date().isIn(current: .month) -> true
@@ -56,11 +99,19 @@ Date().iso8601String -> "2016-08-23T21:26:15.287Z"
 // Create date from iso8601 string
 let date = Date(iso8601String: "2016-08-23T21:26:15.287Z")
 
+// Create date from DateComponents
+let date = Date(year: 2016, month: 8, day: 15) // other components set to current
+let date = Date(hour: 9, minute: 18, second: 1) // other components set to current
+
+// Represent date as a string with ease
+Date().dateString(ofStyle: .medium) -> "Aug 26, 2016"
+Date().timeString(ofStyle: .short) -> "12:55 AM"
+Date().dateTimeString() -> "Aug 26, 2016, 12:55:24 AM"
+
 // and many others!
 ```
 
-
-#### String Extensions (48)
+#### String Extensions (53)
 ```swift
 // Return count of substring in string
 "hello world".count(of "o", caseSensitive: false) -> 2
@@ -78,7 +129,7 @@ let date = Date(iso8601String: "2016-08-23T21:26:15.287Z")
 "Some variable name".camelCased -> "someVariableName"
 
 // Check if string is in valid email format
-"omaralbeik@gmail.com".isEmail -> true
+"john.doe@example.com".isEmail -> true
 
 // Check if string contains at least one letter and one number
 "123abc".isAlphaNumeric -> true
@@ -101,17 +152,21 @@ String.random(of length: 10) -> "AhEju28kNl"
 // Convert string to numbers
 "12.12".toDouble -> 12.12
 
-// Encode string into url
-"it's easy to encode strings".urlEncoded() -> "it's%20easy%20to%20encode%20strings"
+// Encode and decode URLs
+"it's easy to encode strings".urlEncoded -> "it's%20easy%20to%20encode%20strings"
+"it's%20easy%20to%20encode%20strings".urlDecoded -> "it's easy to encode strings"
 
-// Decode url
-"it's%20easy%20to%20encode%20strings".urlDecoded() -> "it's easy to encode strings"
+// Encode and decode base64
+"Hello World!".base64Encoded -> "SGVsbG8gV29ybGQh"
+"SGVsbG8gV29ybGQh".base64Decoded = "Hello World!"
+
+// Truncate strings with a trailing
+"This is a very long sentence".truncated(to length: 14, trailing: = "...") -> "This is a very..."
 
 // Repeat a string n times
 "s" * 5 -> "sssss"
 // and many others!
 ```
-
 
 #### UIColor Extensions (7)
 ```swift
@@ -130,14 +185,13 @@ let facebookColor = UIColor.socialColors.facebook
 // and many others!
 ```
 
-
-#### Number Extensions (33)
+#### Number Types Extensions (33)
 ```swift
 // Return square root of a number
 √ 9 = 3
 
 // Return square power of a number
-5 ^ 2 = 25
+5 ** 2 = 25
 
 // Return a number plus or minus another number
 5 ± 2 = (3, 7)
@@ -147,6 +201,109 @@ Int.randomBetween(min: 1, max: 10) = 6
 
 // Return roman numeral for a number
 134.romanNumeral = "CXXXIV"
+
+// and many others!
+```
+
+## UI Extensions
+
+Swifter Swift has many great UI extensions:
+
+#### UIView Extensions
+```swift
+// Set title, title color and image for all states at once!
+button.titleForAllStates(title: "Login")
+button.titleColorForAllStates(color: UIColor.blue)
+button.imageForAllStates(image: UIImage(named: "login"))
+
+// Set borderColor, borderWidth, cornerRadius, shadowColor, and many other properties from code or storyboard
+view.cornerRadius = 30
+```
+<p align="left">
+  <img src="//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/Documentation/screenshots/view_storyboard.png" title="UIButton properties from storyboard" width='250px'>
+</p>
+
+```swift
+// Animate view with completion
+view.fadeIn(duration: 1, completion:((Bool) -> Void)?)
+view.fadeOut(duration: 1, completion:((Bool) -> Void)?)
+view.rotate(byAngle 90, ofType type: .degrees, animated: true, duration: 1, completion:((Bool) -> Void)?)
+view.rotate(toAngle -3, ofType type: .radians, animated: false, duration: 1, completion:((Bool) -> Void)?)
+view.scale(by offset: 4, animated: true, duration:1, completion:((Bool) -> Void)?)
+view.shake(direction: .horizontal, duration: 1, animationType: .easeOut)
+
+// save screenshot of a view
+let image = view.screenShot
+
+// and many others!
+```
+
+#### UIAlertController Extensions
+```swift
+// Create a new alert controller from string or Error
+let alert = UIAlertController(title: "Couldn't sign in", message: "Invalid username or password!")
+let alert = UIAlertController(title: "Error", error: Error)
+
+// show alert with ease
+alert.show()
+```
+
+#### UIButton Extensions
+```swift
+// Set title, title color and image for all states at once!
+button.titleForAllStates(title: "Login")
+button.titleColorForAllStates(color: UIColor.blue)
+button.imageForAllStates(image: UIImage(named: "login"))
+
+// or set each of them from code or storyboard
+button.titleForHighlighted = "Login"
+```
+<p align="left">
+  <img src="//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/Documentation/screenshots/button_storyboard.png" title="UIButton properties from storyboard" width='250px'>
+</p>
+
+#### UIImage Extensions
+```swift
+// Crop images
+let croppedImage = image.cropped(to CGRect)
+
+// Create UIImage from color
+let image = UIImage(color: UIColor, size: CGSize)
+
+// scale to fit width or height
+let scaledImage = image.scaledToHeight(height: CGFloat)
+let scaledImage = image.scaledToWidth(height: CGFloat)
+```
+
+#### UIImageView Extensions
+```swift
+// Download an image from URL in background
+imageView.download(from url, contentMode: .scaleAspectFit, placeHolder: UIImage?)
+```
+
+#### UINavigationBar Extensions
+```swift
+// Change navigation bar font and color
+navbar.setTitleFont(UIFont, with color: UIColor.black)
+```
+
+#### UINavigationController Extensions
+```swift
+// Pop ViewController with completion handler.
+navController.popViewController(completion: (()->Void)?)
+
+// Push ViewController with completion handler.
+navController.pushViewController(UIViewController, completion: (()->Void)?)
+```
+
+#### UITableView Extensions
+```swift
+// Return index path for last row in section.
+tableView.indexPathForLastRow(in section: 2)
+
+// Scroll to bottom or top of TableView.
+tableView.scrollToBottom(animated: true)
+tableView.scrollToTop(animated: true)
 
 // and many others!
 ```
@@ -167,6 +324,12 @@ swifterSwift.isRunningOnSimulator
 
 // and many others!
 ```
+
+## Contributing:
+
+SwifterSwift is in its early stages, any feedback is appreciated and welcomed.
+Please refer to the [contributing guidelines](//github.com/omaralbeik/swiftierswift/CONTRIBUTING.md) before participating.
+
 
 ## Author
 
