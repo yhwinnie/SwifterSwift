@@ -2,7 +2,8 @@
 layout: default
 ---
 
-![SwifterSwift](//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/logo.png)
+<style> @media (max-width: 960px) { #swifterswiftrawgithubusercontentcomomaralbeikswifterswiftmasterlogopng { margin-top: 80px; } } </style>
+## ![SwifterSwift](//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/logo.png)
 
 *A handy collection of native Swift 3 extensions to boost your productivity.*
 
@@ -59,7 +60,23 @@ We also included inline documentation to you to easily look up things in auto co
 
 ## Show me some examples
 
-#### Array Extensions (14)
+**Jump to section:**
+- [Array Extensions](#array-extensions)
+- [Date Extensions](#date-extensions)
+- [String Extensions](#string-extensions)
+- [UIColor Extensions](#uicolor-extensions)
+- [Number Types' Extensions](#number-types-extensions)
+- [UIView Extensions](#uiview-extensions)
+- [UIAlertController Extensions](#uialertcontroller-extensions)
+- [UIButton Extensions](#uibutton-extensions)
+- [UIImage Extensions](#uiimage-extensions)
+- [UIImageView Extensions](#uiimageview-extensions)
+- [UINavigationBar Extensions](#uinavigationbar-extensions)
+- [UINavigationController Extensions](#uinavigationcontroller-extensions)
+- [UITableView Extensions](#uitableview-extensions)
+- [Misc Extensions](#misc-extensions)
+
+#### Array Extensions
 ```swift
 // Remove duplicates from array
 [1, 2, 3, 1, 3].removeDuplicates() -> [1, 2, 3]
@@ -73,7 +90,7 @@ We also included inline documentation to you to easily look up things in auto co
 // and many others!
 ```
 
-#### Date Extensions (28)
+#### Date Extensions
 ```swift
 // Get and set components from date with ease
 date.hour = 14
@@ -111,7 +128,7 @@ Date().dateTimeString() -> "Aug 26, 2016, 12:55:24 AM"
 // and many others!
 ```
 
-#### String Extensions (53)
+#### String Extensions
 ```swift
 // Return count of substring in string
 "hello world".count(of "o", caseSensitive: false) -> 2
@@ -168,7 +185,7 @@ String.random(of length: 10) -> "AhEju28kNl"
 // and many others!
 ```
 
-#### UIColor Extensions (7)
+#### UIColor Extensions
 ```swift
 // Create new UIColor for RGB values
 let color = UIColor(red: 121, green: 220, blue: 164)
@@ -185,7 +202,7 @@ let facebookColor = UIColor.socialColors.facebook
 // and many others!
 ```
 
-#### Number Types Extensions (33)
+#### Number Types' Extensions
 ```swift
 // Return square root of a number
 √ 9 = 3
