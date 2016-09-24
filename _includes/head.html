@@ -3,7 +3,7 @@
 	xhr_head.addEventListener("load", function(e) {
 		if(this.status !== 200)
 			return;
-		document.body.innerHTML =
+		document.getElementsByClassName("container")[0].innerHTML =
 			this.response.body.innerHTML
 			+ document.body.getElementsByClassName("container")[0].innerHTML;
 		return;
