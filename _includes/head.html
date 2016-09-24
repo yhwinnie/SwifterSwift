@@ -1,0 +1,13 @@
+<script>
+	var xhr_head = new XMLHttpRequest();
+	xhr_head.addEventListener("load", function(e) {
+		if(this.status !== 200)
+			return;
+		document.body.innerHTML =
+			this.response + document.body.innerHTML;
+		return;
+	});
+	xhr_head.open("GET","./head",true);
+	xhr_head.responseType = "text";
+	xhr_head.send(null);
+</script>

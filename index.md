@@ -2,26 +2,22 @@
 layout: default
 ---
 
-<style> @media (max-width: 960px) { #swifterswiftrawgithubusercontentcomomaralbeikswifterswiftmasterlogopng { margin-top: 80px; } } </style>
-## ![SwifterSwift](//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/logo.png)
+A handy collection of native Swift 3 extensions to boost your productivity.
 
-*A handy collection of native Swift 3 extensions to boost your productivity.*
+### [Whats New in v1.0.4?](./new)
 
-[SwifterSwift](//github.com/OmarAlbeik/SwifterSwift) is a Swift3 library with various extensions done to make iOS application development easier and readable for everyone and its a library of over **250** properties and methods, designed to extend Swift's functionality and productivity, staying faithful to the original design guidelines of swift 3.
+## Requirements:
 
-<style> .container P A IMG { display:inline-block; } </style>
-[![Build Status](//travis-ci.org/omaralbeik/SwifterSwift.svg?branch=master)](//travis-ci.org/omaralbeik/SwifterSwift)
-[![Swift](//img.shields.io/badge/Swift-3.0-orange.svg)](//swift.org)
-[![Platform](//img.shields.io/badge/Platform-iOS-lightgrey.svg)](//github.com/omaralbeik/swifterSwift)
-[![Xcode](//img.shields.io/badge/Xcode-8.0%20beta6-blue.svg)](//developer.apple.com/xcode)
-[![MIT](//img.shields.io/badge/License-MIT-red.svg)](//opensource.org/licenses/MIT)
-[![Join the chat at //gitter.im/swifterswift/Lobby](//badges.gitter.im/SwifterSwift/Lobby.svg)](//gitter.im/swifterswift/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Xcode 8 (or later) with Swift 3.
+This library is made for iOS 8 or later, however most of the extensions should work on watchOS, tvOS, and macOS
 
-## How to use?
+
+
+## Installation
 
 ### CocoaPods
 
-[CocoaPods](//cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
 ```bash
 $ gem install cocoapods
@@ -47,36 +43,50 @@ $ pod install
 
 ### Manually
 
-Add the [extensions](//github.com/OmarAlbeik/SwifterSwift/blob/master/Extensions) folder to your Xcode project to use all extensions, or a specific extension.
+Add the [extensions](//github.com/omaralbeik/swiftierswift/tree/master/Extensions) folder to your Xcode project to use all extensions, or a specific extension.
 
 
-## Requirements:
 
-Xcode 8 beta5 or later with Swift 3.
-This library is made for iOS 8 or later, however most of the extensions should work on watchOS, tvOS, and macOS
-## Notes on docs:
+## How to contribute:
 
-We also included inline documentation to you to easily look up things in auto completion while typing, making you write code faster.
+SwifterSwift is in its early stages, any feedback is appreciated and welcomed.
+Please refer to the [contributing guidelines](./contributing) before participating.
 
-## Show me some examples
 
-**Jump to section:**
-- [Array Extensions](#array-extensions)
-- [Date Extensions](#date-extensions)
-- [String Extensions](#string-extensions)
-- [UIColor Extensions](#uicolor-extensions)
-- [Number Types' Extensions](#number-types-extensions)
-- [UIView Extensions](#uiview-extensions)
-- [UIAlertController Extensions](#uialertcontroller-extensions)
-- [UIButton Extensions](#uibutton-extensions)
-- [UIImage Extensions](#uiimage-extensions)
-- [UIImageView Extensions](#uiimageview-extensions)
-- [UINavigationBar Extensions](#uinavigationbar-extensions)
-- [UINavigationController Extensions](#uinavigationcontroller-extensions)
-- [UITableView Extensions](#uitableview-extensions)
-- [Misc Extensions](#misc-extensions)
+## [List Of Extensions](./extensionstable)
 
-#### Array Extensions
+- [x] [Array extensions](./extensionstable#array-extensions)
+- [x] [Character extensions](./extensionstable#character-extensions)
+- [x] [Convenience extensions](./extensionstable#convenience-extensions)
+- [x] [Date extensions](./extensionstable#date-extensions)
+- [x] [Dictionary extensions](./extensionstable#dictionary-extensions)
+- [x] [Double extensions](./extensionstable#double-extensions)
+- [x] [Float extensions](./extensionstable#float-extensions)
+- [x] [Int extensions](./extensionstable#int-extensions)
+- [x] [String extensions](./extensionstable#string-extensions)
+- [x] [CGFloat extensions](./extensionstable#cgfloat-extensions)
+- [x] [CGSize extensions](./extensionstable#cgsize-extensions)
+- [ ] [UIAlertController extensions](./extensionstable#uialertcontroller-extensions)
+- [ ] [UIButton extensions](./extensionstable#uibutton-extensions)
+- [ ] [UIColor extensions](./extensionstable#uicolor-extensions)
+- [ ] [UIImage extensions](./extensionstable#uiimage-extensions)
+- [ ] [UIImageView extensions](./extensionstable#uiimageview-extensions)
+- [ ] [UINavigationBar extensions](./extensionstable#uinavigationbar-extensions)
+- [ ] [UINavigationController extensions](./extensionstable#uinavigationcontroller-extensions)
+- [ ] [UISearchBar extensions](./extensionstable#uisearchbar-extensions)
+- [ ] [UILabel extensions](./extensionstable#uilabel-extensions)
+- [ ] [UITableView extensions](./extensionstable#uitableview-extensions)
+- [ ] [UITextField extensions](./extensionstable#uitextfield-extensions)
+- [ ] [UIView extensions](./extensionstable#uiview-extensions)
+- [ ] [UIViewController extensions](./extensionstable#uiviewcontroller-extensions)
+
+
+## How cool is this?
+
+Swifter Swift is a library of over **250** properties and methods, designed to extend Swift's functionality and productivity, staying faithful to the original design guidelines of swift 3.
+Here are some examples:
+
+#### Array Extensions (14)
 ```swift
 // Remove duplicates from array
 [1, 2, 3, 1, 3].removeDuplicates() -> [1, 2, 3]
@@ -90,7 +100,8 @@ We also included inline documentation to you to easily look up things in auto co
 // and many others!
 ```
 
-#### Date Extensions
+
+#### Date Extensions (28)
 ```swift
 // Get and set components from date with ease
 date.hour = 14
@@ -128,7 +139,8 @@ Date().dateTimeString() -> "Aug 26, 2016, 12:55:24 AM"
 // and many others!
 ```
 
-#### String Extensions
+
+#### String Extensions (53)
 ```swift
 // Return count of substring in string
 "hello world".count(of "o", caseSensitive: false) -> 2
@@ -146,7 +158,7 @@ Date().dateTimeString() -> "Aug 26, 2016, 12:55:24 AM"
 "Some variable name".camelCased -> "someVariableName"
 
 // Check if string is in valid email format
-"john.doe@example.com".isEmail -> true
+"omaralbeik@gmail.com".isEmail -> true
 
 // Check if string contains at least one letter and one number
 "123abc".isAlphaNumeric -> true
@@ -185,7 +197,8 @@ String.random(of length: 10) -> "AhEju28kNl"
 // and many others!
 ```
 
-#### UIColor Extensions
+
+#### UIColor Extensions (7)
 ```swift
 // Create new UIColor for RGB values
 let color = UIColor(red: 121, green: 220, blue: 164)
@@ -202,7 +215,8 @@ let facebookColor = UIColor.socialColors.facebook
 // and many others!
 ```
 
-#### Number Types' Extensions
+
+#### Number Types Extensions (33)
 ```swift
 // Return square root of a number
 √ 9 = 3
@@ -222,9 +236,11 @@ Int.randomBetween(min: 1, max: 10) = 6
 // and many others!
 ```
 
+
 ## UI Extensions
 
 Swifter Swift has many great UI extensions:
+
 
 #### UIView Extensions
 ```swift
@@ -237,7 +253,7 @@ button.imageForAllStates(image: UIImage(named: "login"))
 view.cornerRadius = 30
 ```
 <p align="left">
-  <img src="//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/Documentation/screenshots/view_storyboard.png" title="UIButton properties from storyboard" width='250px'>
+  <img src="https://github.com/omaralbeik/SwifterSwift/blob/master/Documentation/screenshots/view_storyboard.png" title="UIButton properties from storyboard" width='250px'>
 </p>
 
 ```swift
@@ -255,6 +271,7 @@ let image = view.screenShot
 // and many others!
 ```
 
+
 #### UIAlertController Extensions
 ```swift
 // Create a new alert controller from string or Error
@@ -264,6 +281,7 @@ let alert = UIAlertController(title: "Error", error: Error)
 // show alert with ease
 alert.show()
 ```
+
 
 #### UIButton Extensions
 ```swift
@@ -276,8 +294,9 @@ button.imageForAllStates(image: UIImage(named: "login"))
 button.titleForHighlighted = "Login"
 ```
 <p align="left">
-  <img src="//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/Documentation/screenshots/button_storyboard.png" title="UIButton properties from storyboard" width='250px'>
+  <img src="https://github.com/omaralbeik/SwifterSwift/blob/master/Documentation/screenshots/button_storyboard.png" title="UIButton properties from storyboard" width='250px'>
 </p>
+
 
 #### UIImage Extensions
 ```swift
@@ -292,17 +311,20 @@ let scaledImage = image.scaledToHeight(height: CGFloat)
 let scaledImage = image.scaledToWidth(height: CGFloat)
 ```
 
+
 #### UIImageView Extensions
 ```swift
 // Download an image from URL in background
 imageView.download(from url, contentMode: .scaleAspectFit, placeHolder: UIImage?)
 ```
 
+
 #### UINavigationBar Extensions
 ```swift
 // Change navigation bar font and color
 navbar.setTitleFont(UIFont, with color: UIColor.black)
 ```
+
 
 #### UINavigationController Extensions
 ```swift
@@ -312,6 +334,7 @@ navController.popViewController(completion: (()->Void)?)
 // Push ViewController with completion handler.
 navController.pushViewController(UIViewController, completion: (()->Void)?)
 ```
+
 
 #### UITableView Extensions
 ```swift
@@ -324,6 +347,7 @@ tableView.scrollToTop(animated: true)
 
 // and many others!
 ```
+
 
 #### Misc Extensions
 ```swift
@@ -342,29 +366,13 @@ swifterSwift.isRunningOnSimulator
 // and many others!
 ```
 
-## Contributing:
 
-SwifterSwift is in its early stages, any feedback is appreciated and welcomed.
-Please refer to the [contributing guidelines](//github.com/OmarAlbeik/SwifterSwift/blob/master/CONTRIBUTING.md) before participating.
+## Thanks:
 
+Special thanks to:
 
-## Author
+* [Eng. Abdul Rahman Dabbour](https://github.com/thedabbour) for documenting the project
 
-Omar Albeik
-/ [Twitter](//twitter.com/OmarAlbeik)
-/ [Github](//github.com/OmarAlbeik)
+* [Mert Akengin](https://github.com/PvtMert) for creating [project website](http://swiftierswift.com) and helping with unit testing
 
-## Contributors
-
-Eng. Abdul Rahman Dabbour
-/ [Github](//github.com/thedabbour)
-
-Mert Akengin
-/ [Twitter](//twitter.com/PvtMert)
-/ [Github](//github.com/PvtMert)
-
-John Doe
-/ *This random person for our friends which are bought us some coffee day to day*
-
-<!-- yes we stole it from somewhere else -->
-<a href="//github.com/OmarAlbeik/SwifterSwift" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+* [John Doe](https://en.wikipedia.org/wiki/John_Doe), This is a random person of our friends who gets us some coffee day to day
