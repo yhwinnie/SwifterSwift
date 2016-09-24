@@ -4,10 +4,11 @@
 		if(this.status !== 200)
 			return;
 		document.body.innerHTML =
-			this.response + document.body.innerHTML;
+			this.response.body.innerHTML
+			+ document.body.getElementsByClassName("container")[0].innerHTML;
 		return;
 	});
 	xhr_head.open("GET","./head",true);
-	xhr_head.responseType = "text";
+	xhr_head.responseType = "document";
 	xhr_head.send(null);
 </script>

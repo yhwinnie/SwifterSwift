@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="page desc goes here">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftierSwift | Swift3 Extended Libraries</title>
+  <link rel="stylesheet" href="css/main.css">
+<script>
+	var xhr_head = new XMLHttpRequest();
+	xhr_head.addEventListener("load", function(e) {
+		if(this.status !== 200)
+			return;
+		document.body.innerHTML =
+			this.response.body.innerHTML
+			+ document.body.getElementsByClassName("container")[0].innerHTML;
+		return;
+	});
+	xhr_head.open("GET","./head",true);
+	xhr_head.responseType = "document";
+	xhr_head.send(null);
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <h1><a href="./"></a></h1>
+    <p>A handy collection of native Swift 3 extensions to boost your productivity.</p>
+
+<h3 id="whats-new-in-v104new"><a href="./new">Whats New in v1.0.4?</a></h3>
+
+<h2 id="requirements">Requirements:</h2>
+
+<p>Xcode 8 (or later) with Swift 3.
+This library is made for iOS 8 or later, however most of the extensions should work on watchOS, tvOS, and macOS</p>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="cocoapods">CocoaPods</h3>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem install cocoapods
+</code></pre>
+</div>
+
+<p>To integrate SwifterSwift into your Xcode project using CocoaPods, specify it in your <code class="highlighter-rouge">Podfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'SwifterSwift'</span> <span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'https://github.com/omaralbeik/SwifterSwift.git'</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Then, run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pod install
+</code></pre>
+</div>
+
+<h3 id="manually">Manually</h3>
+
+<p>Add the <a href="//github.com/omaralbeik/swiftierswift/tree/master/Extensions">extensions</a> folder to your Xcode project to use all extensions, or a specific extension.</p>
+
+<h2 id="how-to-contribute">How to contribute:</h2>
+
+<p>SwifterSwift is in its early stages, any feedback is appreciated and welcomed.
+Please refer to the <a href="./contributing">contributing guidelines</a> before participating.</p>
+
+<h2 id="list-of-extensionsextensionstable"><a href="./extensionstable">List Of Extensions</a></h2>
+
+<ul>
+  <li>[x] <a href="./extensionstable#array-extensions">Array extensions</a></li>
+  <li>[x] <a href="./extensionstable#character-extensions">Character extensions</a></li>
+  <li>[x] <a href="./extensionstable#convenience-extensions">Convenience extensions</a></li>
+  <li>[x] <a href="./extensionstable#date-extensions">Date extensions</a></li>
+  <li>[x] <a href="./extensionstable#dictionary-extensions">Dictionary extensions</a></li>
+  <li>[x] <a href="./extensionstable#double-extensions">Double extensions</a></li>
+  <li>[x] <a href="./extensionstable#float-extensions">Float extensions</a></li>
+  <li>[x] <a href="./extensionstable#int-extensions">Int extensions</a></li>
+  <li>[x] <a href="./extensionstable#string-extensions">String extensions</a></li>
+  <li>[x] <a href="./extensionstable#cgfloat-extensions">CGFloat extensions</a></li>
+  <li>[x] <a href="./extensionstable#cgsize-extensions">CGSize extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uialertcontroller-extensions">UIAlertController extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uibutton-extensions">UIButton extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uicolor-extensions">UIColor extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uiimage-extensions">UIImage extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uiimageview-extensions">UIImageView extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uinavigationbar-extensions">UINavigationBar extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uinavigationcontroller-extensions">UINavigationController extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uisearchbar-extensions">UISearchBar extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uilabel-extensions">UILabel extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uitableview-extensions">UITableView extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uitextfield-extensions">UITextField extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uiview-extensions">UIView extensions</a></li>
+  <li>[ ] <a href="./extensionstable#uiviewcontroller-extensions">UIViewController extensions</a></li>
+</ul>
+
+<h2 id="how-cool-is-this">How cool is this?</h2>
+
+<p>Swifter Swift is a library of over <strong>250</strong> properties and methods, designed to extend Swift’s functionality and productivity, staying faithful to the original design guidelines of swift 3.
+Here are some examples:</p>
+
+<h4 id="array-extensions-14">Array Extensions (14)</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Remove duplicates from array</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="nf">removeDuplicates</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="c1">// Return all indexes of specified item</span>
+<span class="p">[</span><span class="s">"h"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"l"</span><span class="p">,</span> <span class="s">"l"</span><span class="p">,</span> <span class="s">"o"</span><span class="p">]</span><span class="o">.</span><span class="nf">indexes</span><span class="p">(</span><span class="n">of</span> <span class="nv">item</span><span class="p">:</span> <span class="s">"l"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="c1">// Return random item from array</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">randomItem</span> <span class="o">-&gt;</span> <span class="mi">3</span>
+
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h4 id="date-extensions-28">Date Extensions (28)</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Get and set components from date with ease</span>
+<span class="n">date</span><span class="o">.</span><span class="n">hour</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="c1">// Check if date is in today</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="n">isInToday</span> <span class="o">-&gt;</span> <span class="kc">true</span>
+
+<span class="c1">// Add 1 month to current date</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">component</span><span class="p">:</span> <span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">// Return date at the beginning of current day</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="nf">beginning</span><span class="p">(</span><span class="n">of</span> <span class="nv">component</span><span class="p">:</span> <span class="o">.</span><span class="n">day</span><span class="p">)</span>
+
+<span class="c1">// Return date at the end of current month</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="nf">end</span><span class="p">(</span><span class="n">of</span> <span class="nv">component</span><span class="p">:</span> <span class="o">.</span><span class="n">month</span><span class="p">)</span>
+
+<span class="c1">// Check if date is in current calendar unit</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="nf">isIn</span><span class="p">(</span><span class="nv">current</span><span class="p">:</span> <span class="o">.</span><span class="n">month</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">true</span>
+
+<span class="c1">// Return iso8601 string for date</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="n">iso8601String</span> <span class="o">-&gt;</span> <span class="s">"2016-08-23T21:26:15.287Z"</span>
+
+<span class="c1">// Create date from iso8601 string</span>
+<span class="k">let</span> <span class="nv">date</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">(</span><span class="nv">iso8601String</span><span class="p">:</span> <span class="s">"2016-08-23T21:26:15.287Z"</span><span class="p">)</span>
+
+<span class="c1">// Create date from DateComponents</span>
+<span class="k">let</span> <span class="nv">date</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">(</span><span class="nv">year</span><span class="p">:</span> <span class="mi">2016</span><span class="p">,</span> <span class="nv">month</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="nv">day</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span> <span class="c1">// other components set to current</span>
+<span class="k">let</span> <span class="nv">date</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">(</span><span class="nv">hour</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="nv">minute</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="nv">second</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// other components set to current</span>
+
+<span class="c1">// Represent date as a string with ease</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="nf">dateString</span><span class="p">(</span><span class="nv">ofStyle</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s">"Aug 26, 2016"</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="nf">timeString</span><span class="p">(</span><span class="nv">ofStyle</span><span class="p">:</span> <span class="o">.</span><span class="n">short</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s">"12:55 AM"</span>
+<span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="nf">dateTimeString</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s">"Aug 26, 2016, 12:55:24 AM"</span>
+
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h4 id="string-extensions-53">String Extensions (53)</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Return count of substring in string</span>
+<span class="s">"hello world"</span><span class="o">.</span><span class="nf">count</span><span class="p">(</span><span class="n">of</span> <span class="s">"o"</span><span class="p">,</span> <span class="nv">caseSensitive</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">2</span>
+
+<span class="c1">// Return an array of strings separated by given string</span>
+<span class="s">"hello world"</span><span class="o">.</span><span class="nf">split</span><span class="p">(</span><span class="n">by</span> <span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s">"hello"</span><span class="p">,</span> <span class="s">"world"</span><span class="p">]</span>
+
+<span class="c1">// Return string with no spaces or new lines in beginning and end</span>
+<span class="s">"</span><span class="se">\n</span><span class="s"> Hello   "</span><span class="o">.</span><span class="n">trimmed</span> <span class="o">-&gt;</span> <span class="s">"Hello"</span>
+
+<span class="c1">// Return most common character in string</span>
+<span class="s">"swifterSwift is making swift more swifty"</span><span class="o">.</span><span class="n">mostCommonCharacter</span> <span class="o">-&gt;</span> <span class="s">"i"</span>
+
+<span class="c1">// Returns CamelCase of string</span>
+<span class="s">"Some variable name"</span><span class="o">.</span><span class="n">camelCased</span> <span class="o">-&gt;</span> <span class="s">"someVariableName"</span>
+
+<span class="c1">// Check if string is in valid email format</span>
+<span class="s">"omaralbeik@gmail.com"</span><span class="o">.</span><span class="n">isEmail</span> <span class="o">-&gt;</span> <span class="kc">true</span>
+
+<span class="c1">// Check if string contains at least one letter and one number</span>
+<span class="s">"123abc"</span><span class="o">.</span><span class="n">isAlphaNumeric</span> <span class="o">-&gt;</span> <span class="kc">true</span>
+
+<span class="c1">// Reverse string</span>
+<span class="s">"123abc"</span><span class="o">.</span><span class="nf">reverse</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s">"cba321"</span>
+
+<span class="c1">// Return latinized string</span>
+<span class="s">"Hèllö Wórld!"</span><span class="o">.</span><span class="nf">latinize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s">"Hello World!"</span>
+
+<span class="c1">// Return latinized string</span>
+<span class="kt">String</span><span class="o">.</span><span class="nf">random</span><span class="p">(</span><span class="n">of</span> <span class="nv">length</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s">"AhEju28kNl"</span>
+
+<span class="c1">// Check if string contains one or more instance of substring</span>
+<span class="s">"Hello World!"</span><span class="o">.</span><span class="nf">contain</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"o"</span><span class="p">,</span> <span class="nv">caseSensitive</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">true</span>
+
+<span class="c1">// Check if string contains one or more emojis</span>
+<span class="s">"string👨‍with😍emojis✊🏿"</span><span class="o">.</span><span class="n">containEmoji</span> <span class="o">-&gt;</span> <span class="kc">true</span>
+
+<span class="c1">// Convert string to numbers</span>
+<span class="s">"12.12"</span><span class="o">.</span><span class="n">toDouble</span> <span class="o">-&gt;</span> <span class="mf">12.12</span>
+
+<span class="c1">// Encode and decode URLs</span>
+<span class="s">"it's easy to encode strings"</span><span class="o">.</span><span class="n">urlEncoded</span> <span class="o">-&gt;</span> <span class="s">"it's%20easy%20to%20encode%20strings"</span>
+<span class="s">"it's%20easy%20to%20encode%20strings"</span><span class="o">.</span><span class="n">urlDecoded</span> <span class="o">-&gt;</span> <span class="s">"it's easy to encode strings"</span>
+
+<span class="c1">// Encode and decode base64</span>
+<span class="s">"Hello World!"</span><span class="o">.</span><span class="n">base64Encoded</span> <span class="o">-&gt;</span> <span class="s">"SGVsbG8gV29ybGQh"</span>
+<span class="s">"SGVsbG8gV29ybGQh"</span><span class="o">.</span><span class="n">base64Decoded</span> <span class="o">=</span> <span class="s">"Hello World!"</span>
+
+<span class="c1">// Truncate strings with a trailing</span>
+<span class="s">"This is a very long sentence"</span><span class="o">.</span><span class="nf">truncated</span><span class="p">(</span><span class="n">to</span> <span class="nv">length</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="nv">trailing</span><span class="p">:</span> <span class="o">=</span> <span class="s">"..."</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s">"This is a very..."</span>
+
+<span class="c1">// Repeat a string n times</span>
+<span class="s">"s"</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">-&gt;</span> <span class="s">"sssss"</span>
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h4 id="uicolor-extensions-7">UIColor Extensions (7)</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create new UIColor for RGB values</span>
+<span class="k">let</span> <span class="nv">color</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mi">121</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mi">220</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mi">164</span><span class="p">)</span>
+
+<span class="c1">// Create new UIColor for a hexadecimal value</span>
+<span class="k">let</span> <span class="nv">color</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">netHex</span><span class="p">:</span><span class="mh">0x45C91B</span><span class="p">)</span>
+
+<span class="c1">// Return hexadecimal value string</span>
+<span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">hexString</span> <span class="o">-&gt;</span> <span class="s">"#FF0000"</span>
+
+<span class="c1">// Return brand colors from more than 30 social brands</span>
+<span class="k">let</span> <span class="nv">facebookColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">socialColors</span><span class="o">.</span><span class="n">facebook</span>
+
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h4 id="number-types-extensions-33">Number Types Extensions (33)</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Return square root of a number</span>
+<span class="err">√</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1">// Return square power of a number</span>
+<span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="c1">// Return a number plus or minus another number</span>
+<span class="mi">5</span> <span class="err">±</span> <span class="mi">2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="c1">// Return random number in range</span>
+<span class="kt">Int</span><span class="o">.</span><span class="nf">randomBetween</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="c1">// Return roman numeral for a number</span>
+<span class="mi">134</span><span class="o">.</span><span class="n">romanNumeral</span> <span class="o">=</span> <span class="s">"CXXXIV"</span>
+
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h2 id="ui-extensions">UI Extensions</h2>
+
+<p>Swifter Swift has many great UI extensions:</p>
+
+<h4 id="uiview-extensions">UIView Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Set title, title color and image for all states at once!</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">titleForAllStates</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Login"</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">titleColorForAllStates</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">imageForAllStates</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"login"</span><span class="p">))</span>
+
+<span class="c1">// Set borderColor, borderWidth, cornerRadius, shadowColor, and many other properties from code or storyboard</span>
+<span class="n">view</span><span class="o">.</span><span class="n">cornerRadius</span> <span class="o">=</span> <span class="mi">30</span>
+</code></pre>
+</div>
+<p align="left">
+  <img src="https://github.com/omaralbeik/SwifterSwift/blob/master/Documentation/screenshots/view_storyboard.png" title="UIButton properties from storyboard" width="250px" />
+</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Animate view with completion</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">fadeIn</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">fadeOut</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">rotate</span><span class="p">(</span><span class="n">byAngle</span> <span class="mi">90</span><span class="p">,</span> <span class="n">ofType</span> <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">degrees</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">rotate</span><span class="p">(</span><span class="n">toAngle</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="n">ofType</span> <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">radians</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">scale</span><span class="p">(</span><span class="n">by</span> <span class="nv">offset</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">shake</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="o">.</span><span class="n">horizontal</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">animationType</span><span class="p">:</span> <span class="o">.</span><span class="n">easeOut</span><span class="p">)</span>
+
+<span class="c1">// save screenshot of a view</span>
+<span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">screenShot</span>
+
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h4 id="uialertcontroller-extensions">UIAlertController Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Create a new alert controller from string or Error</span>
+<span class="k">let</span> <span class="nv">alert</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Couldn't sign in"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Invalid username or password!"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">alert</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Error"</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span>
+
+<span class="c1">// show alert with ease</span>
+<span class="n">alert</span><span class="o">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h4 id="uibutton-extensions">UIButton Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Set title, title color and image for all states at once!</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">titleForAllStates</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Login"</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">titleColorForAllStates</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">imageForAllStates</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"login"</span><span class="p">))</span>
+
+<span class="c1">// or set each of them from code or storyboard</span>
+<span class="n">button</span><span class="o">.</span><span class="n">titleForHighlighted</span> <span class="o">=</span> <span class="s">"Login"</span>
+</code></pre>
+</div>
+<p align="left">
+  <img src="https://github.com/omaralbeik/SwifterSwift/blob/master/Documentation/screenshots/button_storyboard.png" title="UIButton properties from storyboard" width="250px" />
+</p>
+
+<h4 id="uiimage-extensions">UIImage Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Crop images</span>
+<span class="k">let</span> <span class="nv">croppedImage</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="nf">cropped</span><span class="p">(</span><span class="n">to</span> <span class="kt">CGRect</span><span class="p">)</span>
+
+<span class="c1">// Create UIImage from color</span>
+<span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span>
+
+<span class="c1">// scale to fit width or height</span>
+<span class="k">let</span> <span class="nv">scaledImage</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="nf">scaledToHeight</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">scaledImage</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="nf">scaledToWidth</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="uiimageview-extensions">UIImageView Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Download an image from URL in background</span>
+<span class="n">imageView</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="n">from</span> <span class="n">url</span><span class="p">,</span> <span class="nv">contentMode</span><span class="p">:</span> <span class="o">.</span><span class="n">scaleAspectFit</span><span class="p">,</span> <span class="nv">placeHolder</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span>
+</code></pre>
+</div>
+
+<h4 id="uinavigationbar-extensions">UINavigationBar Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Change navigation bar font and color</span>
+<span class="n">navbar</span><span class="o">.</span><span class="nf">setTitleFont</span><span class="p">(</span><span class="kt">UIFont</span><span class="p">,</span> <span class="n">with</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="uinavigationcontroller-extensions">UINavigationController Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Pop ViewController with completion handler.</span>
+<span class="n">navController</span><span class="o">.</span><span class="nf">popViewController</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span><span class="o">-&gt;</span><span class="kt">Void</span><span class="p">)?)</span>
+
+<span class="c1">// Push ViewController with completion handler.</span>
+<span class="n">navController</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span><span class="o">-&gt;</span><span class="kt">Void</span><span class="p">)?)</span>
+</code></pre>
+</div>
+
+<h4 id="uitableview-extensions">UITableView Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Return index path for last row in section.</span>
+<span class="n">tableView</span><span class="o">.</span><span class="nf">indexPathForLastRow</span><span class="p">(</span><span class="k">in</span> <span class="nv">section</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">// Scroll to bottom or top of TableView.</span>
+<span class="n">tableView</span><span class="o">.</span><span class="nf">scrollToBottom</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">tableView</span><span class="o">.</span><span class="nf">scrollToTop</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h4 id="misc-extensions">Misc Extensions</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Return JSON string from a dictionary</span>
+<span class="k">let</span> <span class="nv">jsonString</span> <span class="o">=</span> <span class="n">someDictionary</span><span class="o">.</span><span class="nf">jsonString</span><span class="p">(</span><span class="nv">prettify</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+
+<span class="c1">// Return JSON data from a dictionary</span>
+<span class="k">let</span> <span class="nv">jsonData</span> <span class="o">=</span> <span class="n">someDictionary</span><span class="o">.</span><span class="n">jsonData</span>
+
+<span class="c1">// Check if app is running in debugging mode</span>
+<span class="n">swifterSwift</span><span class="o">.</span><span class="n">isInDebuggingMode</span>
+
+<span class="c1">// Check if app is running on simulator</span>
+<span class="n">swifterSwift</span><span class="o">.</span><span class="n">isRunningOnSimulator</span>
+
+<span class="c1">// and many others!</span>
+</code></pre>
+</div>
+
+<h2 id="thanks">Thanks:</h2>
+
+<p>Special thanks to:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/thedabbour">Eng. Abdul Rahman Dabbour</a> for documenting the project</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/PvtMert">Mert Akengin</a> for creating <a href="http://swiftierswift.com">project website</a> and helping with unit testing</p>
+  </li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/John_Doe">John Doe</a>, This is a random person of our friends who gets us some coffee day to day</p>
+  </li>
+</ul>
+
+  </div>
+<script>
+	var last = 0;
+	function refresh() {
+		var xhr = new XMLHttpRequest();
+		xhr.onloadend = function(e) {
+			if(this.status != 200)
+				return;
+			clenstr = this.getResponseHeader("content-length");
+			clen = parseInt(clenstr);
+			if(last == 0)
+				last = clen;
+			else if(clen != last)
+				window.location.reload();
+			return;
+		}
+		xhr.open("HEAD",window.location,true);
+		xhr.send(null);
+		return;
+	}
+	window.onload = function() {
+		if(window.location.hostname == "localhost") {
+			refresh();
+			setInterval(refresh,1000);
+		}
+		return;
+	};
+</script>
+</body>
+</html>

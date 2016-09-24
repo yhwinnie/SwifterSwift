@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="page desc goes here">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftierSwift | Swift3 Extended Libraries</title>
+  <link rel="stylesheet" href="css/main.css">
+<script>
+	var xhr_head = new XMLHttpRequest();
+	xhr_head.addEventListener("load", function(e) {
+		if(this.status !== 200)
+			return;
+		document.body.innerHTML =
+			this.response.body.innerHTML
+			+ document.body.getElementsByClassName("container")[0].innerHTML;
+		return;
+	});
+	xhr_head.open("GET","./head",true);
+	xhr_head.responseType = "document";
+	xhr_head.send(null);
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <h1><a href="./"></a></h1>
+    <h3 id="whats-new-in-v104">Whats new in v1.0.4</h3>
+<hr />
+
+<p>UILabelExtensions:</p>
+<ul>
+  <li><strong>requiredHeight</strong>: Return required height for a label</li>
+</ul>
+
+<p>UIImageViewExtensions:</p>
+<ul>
+  <li><strong>blur(withStyle: UIBlurEffectStyle)</strong>: Make image view blurry</li>
+  <li><strong>blurred(withStyle: UIBlurEffectStyle)</strong>: Return a blurred version of an image view</li>
+</ul>
+
+<p>UINavigationControllerExtensions:</p>
+<ul>
+  <li><strong>makeTransparent(withTint: UIColor)</strong>: Make navigation controller’s navigation bar transparent</li>
+</ul>
+
+<p>UINavigationBarExtensions:</p>
+<ul>
+  <li><strong>makeTransparent(withTint: UIColor)</strong>: Make navigation controller’s navigation bar transparent</li>
+</ul>
+
+<p>UITextFieldExtensions:</p>
+<ul>
+  <li><strong>trimmedText</strong>: Return text with no spaces or new lines in beginning and end</li>
+</ul>
+
+<p>UIViewExtensions:</p>
+<ul>
+  <li><strong>addShadow(ofColor, radius, offset, opacity)</strong>: /// Add shadow to view</li>
+</ul>
+
+<p>UIImageExtensions:</p>
+<ul>
+  <li><strong>filled(withColor)</strong>: Return image filled with color</li>
+</ul>
+
+<p>DateExtensions:</p>
+<ul>
+  <li><strong>nearestFiveMinutes</strong>: Return nearest five minutes to date</li>
+  <li><strong>nearestTenMinutes</strong>: Return nearest ten minutes to date</li>
+</ul>
+
+<p>UIViewExtensions:</p>
+<ul>
+  <li><strong>shake</strong>: Completion handler added to shake function</li>
+</ul>
+
+  </div>
+<script>
+	var last = 0;
+	function refresh() {
+		var xhr = new XMLHttpRequest();
+		xhr.onloadend = function(e) {
+			if(this.status != 200)
+				return;
+			clenstr = this.getResponseHeader("content-length");
+			clen = parseInt(clenstr);
+			if(last == 0)
+				last = clen;
+			else if(clen != last)
+				window.location.reload();
+			return;
+		}
+		xhr.open("HEAD",window.location,true);
+		xhr.send(null);
+		return;
+	}
+	window.onload = function() {
+		if(window.location.hostname == "localhost") {
+			refresh();
+			setInterval(refresh,1000);
+		}
+		return;
+	};
+</script>
+</body>
+</html>
