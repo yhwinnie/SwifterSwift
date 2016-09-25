@@ -294,7 +294,7 @@ button.imageForAllStates(image: UIImage(named: "login"))
 button.titleForHighlighted = "Login"
 ```
 <p align="left">
-  <img src="https://github.com/omaralbeik/SwifterSwift/blob/master/Documentation/screenshots/button_storyboard.png" title="UIButton properties from storyboard" width='250px'>
+  <img src="//raw.githubusercontent.com/omaralbeik/SwifterSwift/blob/master/Documentation/screenshots/button_storyboard.png" title="UIButton properties from storyboard" width='250px'>
 </p>
 
 
