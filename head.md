@@ -5,7 +5,11 @@ layout: default
 <style> @media (max-width: 960px) { #swifterswiftrawgithubusercontentcomomaralbeikswifterswiftmasterlogopng { margin-top: 80px; } } </style>
 ## [![SwifterSwift](//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/logo.png)](./)
 
-<style> .container P A IMG { display:inline-block; } </style>
+<style>
+.container P A IMG { display:inline-block; } 
+.container .container P { text-align:center; }
+</style>
+
 [![Build Status](//travis-ci.org/omaralbeik/SwifterSwift.svg?branch=master)](//travis-ci.org/omaralbeik/SwifterSwift)
 [![Swift](//img.shields.io/badge/Swift-3.0-orange.svg)](//swift.org)
 [![Platform](//img.shields.io/badge/Platform-iOS-lightgrey.svg)](//github.com/omaralbeik/swifterSwift)
