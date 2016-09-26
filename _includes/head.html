@@ -1,6 +1,5 @@
 <script>
 	var xhr_head = new XMLHttpRequest();
-	var pos = [ document.scrollWidth, document.scrollHeight, ];
 	xhr_head.addEventListener("load", function(e) {
 		if(this.status !== 200)
 			return;
@@ -9,9 +8,11 @@
 			this.response.body.innerHTML
 			+ document.body.getElementsByClassName("container")[0].innerHTML;
 		window.scroll(
-			window.scrollX + document.scrollWidth - pos[0],
-			window.scrollY + document.scrollHeight - pos[1]
+			window.scrollX + this.response.scrollWidth,
+			window.scrollY + this.response.scrollHeight
 		);
+		if(window.location.hash.length > 0)
+			window.location = window.location.hash;
 		return;
 	});
 	xhr_head.open("GET","./head",true);
