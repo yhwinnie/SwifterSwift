@@ -28,6 +28,7 @@ Doing this helps prioritize the most common problems and requests.
 
 
 **When reporting issues, please include the following:**
+
 * The version of Xcode you're using
 * The version of iOS you're targeting
 * The full output of any stack trace or compiler error
