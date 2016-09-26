@@ -1,11 +1,17 @@
 <script>
 	var xhr_head = new XMLHttpRequest();
+	var pos = [ document.scrollWidth, document.scrollHeight, ];
 	xhr_head.addEventListener("load", function(e) {
 		if(this.status !== 200)
 			return;
+		this.response.body.getElementsByTagName("script")[0].innerHTML = "";
 		document.getElementsByClassName("container")[0].innerHTML =
 			this.response.body.innerHTML
 			+ document.body.getElementsByClassName("container")[0].innerHTML;
+		window.scroll(
+			window.scrollX + document.scrollWidth - pos[0],
+			window.scrollY + document.scrollHeight - pos[1]
+		);
 		return;
 	});
 	xhr_head.open("GET","./head",true);
