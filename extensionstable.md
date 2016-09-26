@@ -307,7 +307,7 @@ layout: default
 |**titleForSelected** | IBInspectable variable | String? | Title of selected state for button; also inspectable from Storyboard |
 
 
-# UIColor extensions
+## UIColor extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
@@ -320,7 +320,7 @@ layout: default
 |**socialColors** | Struct | -- | Brand identity color of popular social media platform |
 
 
-# UIImage extensions
+## UIImage extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
@@ -330,7 +330,7 @@ layout: default
 |**scaledToHeight(height: CGFloat, with UIImageOrientation?)** | Function | UIImage? | Scale image to width with respect to aspect ratio |
 |**scaledToWidth(width: CGFloat, with UIImageOrientation?)** | Function | UIImage? | Scale image to width with respect to aspect ratio |
 
-# UIImageView extensions
+## UIImageView extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
@@ -339,7 +339,7 @@ layout: default
 |**download(from url: String, contentMode: UIViewContentMode, placeHolder: UIImage?)** | Function | UIImage? | Download image from url and set it in an imageView |
 
 
-# UINavigationBar extensions
+## UINavigationBar extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
@@ -347,7 +347,7 @@ layout: default
 |**setTitleFont(font: UIFont, with color: UIColor)** | Function | -- | Set Navigation Bar title, title color and font |
 
 
-# UINavigationController extensions
+## UINavigationController extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
@@ -384,14 +384,14 @@ layout: default
 |**totalRows** | Read-Only variable | Int | Return number of all rows in all sections of table |
 
 
-# UITextField extensions
+## UITextField extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
 |**isEmpty** | Read-Only Variable | Bool | Return true if text field is empty |
 |**trimmedText** | Read-Only Variable | String? | Return text with no spaces or new lines in beginning and end |
 
-# UIViewController extensions
+## UIViewController extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
@@ -402,7 +402,7 @@ layout: default
 |**removeNotificationsObserver()** | Function | -- | Unassign as listener from all notifications |
 
 
-# UIView extensions
+## UIView extensions
 
 |Name | Type | Return Type | Description |
 |:--- | :--- | :---: | :--- |
