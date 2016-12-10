@@ -4,7 +4,7 @@ layout: default
 
 A handy collection of **more than 360 native Swift 3 extensions** to boost your productivity.
 
-## [Whats New in v1.3?](//github.com/omaralbeik/SwifterSwift/wiki/whats-new#v13)
+## [Whats New in v1.3?](./new)
 v1.3 adds **more than 90 new extensions** making it the widest extensions library available online for Swift 3 with extensions for more than **35 type**.
 This is the biggest update since library launch! we're so excited 🤓
 
