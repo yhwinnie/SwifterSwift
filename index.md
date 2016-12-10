@@ -305,9 +305,7 @@ view.roundCorners([.bottomLeft, .topRight], radius: 30)
 view.addShadow(ofColor .black, radius: 3, opacity: 0.5)
 
 ```
-<p align="left">
-  <img src="//github.com/omaralbeik/SwifterSwift/blob/master/Screenshots/view_storyboard.png" title="UIButton properties from storyboard" width='250px'>
-</p>
+![storyboard](//raw.githubusercontent.com/omaralbeik/SwifterSwift/master/Screenshots/view_storyboard.png)
 
 ```swift
 // Animate view with completion
@@ -366,9 +364,7 @@ button.titleForHighlighted = "Login"
 
 // and many others!
 ```
-<p align="left">
-  <img src="//github.com/omaralbeik/SwifterSwift/blob/master/Screenshots/button_storyboard.png" title="UIButton properties from storyboard" width='250px'>
-</p>
+![buttons](https://raw.githubusercontent.com/omaralbeik/SwifterSwift/master/Screenshots/button_storyboard.png)
 
 
 #### UIImage Extensions
