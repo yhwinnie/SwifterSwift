@@ -11,6 +11,7 @@ layout: default
 </style>
 
 [![Build Status](//travis-ci.org/omaralbeik/SwifterSwift.svg?branch=master)](//travis-ci.org/omaralbeik/SwifterSwift)
+[![Cocoapods](https://img.shields.io/cocoapods/v/SwifterSwift.svg)](https://cocoapods.org/pods/SwifterSwift)
 [![Swift](//img.shields.io/badge/Swift-3.0-orange.svg)](//swift.org)
 [![Platform](//img.shields.io/badge/Platform-iOS-lightgrey.svg)](//github.com/omaralbeik/swifterSwift)
 [![Xcode](//img.shields.io/badge/Xcode-8.0-blue.svg)](//developer.apple.com/xcode)
